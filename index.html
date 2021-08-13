@@ -8,8 +8,37 @@
 	<link rel="stylesheet" href="./index.css">
 </head>
 <body>
-	<header></header>
-	<main></main>
+	<header>
+		<nav>
+			<img src="" alt="Foto de perfil Alx Baylon">
+			<p>Alx Baylon - Aldo Juárez</p>
+		</nav>
+	</header>
+	<main>
+		<h1>¡Bienvenido! Te diré que te conviene más, el streaming o ir al cine.</h1>
+		<p>Introduce los siguientes datos:</p>
+		<form>
+			<div>
+				<label for="InputMoviesNumber">
+					<span>Dime la cantidad de peliculas que quieres ver en el mes:</span>
+					<input type="number" id="InputMoviesNumber" required> 
+				</label>
+			</div>
+			<div>
+				<label for="StreamingServices--Netflix">
+					<span>Netflix</span>
+					<input type="checkbox" id="StreamingServices--Netflix">
+				</label>
+				<label for="StreamingServices--HBO-Max">
+					<span>HBO-Max</span>
+					<input type="checkbox" id="StreamingServices--HBO-Max">
+				</label>
+			</div>
+			<button type="button" onclick="onPricesResult()">Calcular</button>
+
+			<div id="ResultP"></div>
+		</form>
+	</main>
 	<footer></footer>
 	<script src="./index.js"></script>
 </body>

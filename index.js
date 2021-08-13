@@ -1,0 +1,3 @@
+const onPricesResult = () =>{
+	alert("holis");
+}
