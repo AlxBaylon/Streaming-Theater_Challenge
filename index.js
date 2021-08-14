@@ -25,9 +25,9 @@ const onPricesResult = () => {
 
 		let winner;
 		if(precioStreaming > moviesTotalPrice){
-			winner = 'paga mejor el cine';
+			winner = 'mejor paga el cine';
 		} else if(precioStreaming < moviesTotalPrice){
-			winner = 'paga mejor el streaming';
+			winner = 'mejor paga el streaming';
 		} else {
 			winner = 'cuestan igual, paga la que te convenga';
 		}

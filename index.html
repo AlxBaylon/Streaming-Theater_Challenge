@@ -21,20 +21,24 @@
 		</nav>
 	</header>
 	<main class="main">
-		<h1>¡Bienvenido!</h1>
-		<p>Te diré que te conviene más, el streaming o ir al cine.</p>
-		<p>Introduce los siguientes datos:</p>
-		<form>
+		<div>
+			<h1>¡Bienvenido!</h1>
+			<p>Te diré que te conviene más, el streaming o ir al cine.</p>
+			<p>Introduce los siguientes datos:</p>
+		</div>
+		<form class="streaming-form">
 			<div>
 				<label for="InputMoviesNumber">
-					<span>Dime la cantidad de peliculas que quieres ver en el mes:</span>
+					<span>Cantidad de películas que quieres ver en el mes:</span>
 					<input type="number" id="InputMoviesNumber" required> 
 				</label>
 			</div>
 			<div class="Streaming-checkboxes">
-				<p>Dime en qué plataformas se encuentran las películas que deseas ver:</p>
+				<p>Plataformas que tienen las películas que deseas ver:</p>
 			</div>
-			<button type="button" onclick="onPricesResult()">Calcular</button>
+			<div class="Streaming-button">
+				<button type="button" onclick="onPricesResult()">Calcular</button>
+			</div>
 
 			<div id="ResultP"></div>
 		</form>

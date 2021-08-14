@@ -45,10 +45,12 @@ body{
 
 .main{
 	width: 100%;
-	min-height: 240px;
+	min-height: calc(100vh - 200px);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: space-around;
+	padding: 12px;
 	background-color: var(--JS-yellow);
 	color: var(--JS-black);
 	text-align: center;
@@ -59,4 +61,26 @@ body{
 	min-height: 100px;
 	background-color: var(--JS-black);
 	color: var(--JS-white);
+}
+
+.footer div {
+	height: 60px;
+}
+
+.footer div ul{
+	height: 100%;
+	list-style: none;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.footer div ul li a{
+	color: var(--JS-white);
+	text-decoration: none;
+}
+
+.footer p{
+	text-align: center;
 }
