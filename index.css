@@ -1,3 +1,12 @@
+:root{
+	--JS-yellow: #f6df1c;
+	--JS-black: #000;
+	--JS-white: #fff;
+	--Platzi-green: #87c81e;
+	--Font1: 'Atkinson Hyperlegible', sans-serif;
+	--Font2: 'Roboto Mono', monospace;
+}
+
 * {
 	padding: 0;
 	margin: 0;
@@ -10,4 +19,44 @@ html {
 
 body{
 	font-size: 1.6rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-family: var(--Font1);
+}
+
+.header{
+	width: 100%;
+	min-height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--JS-black);
+	color: var(--JS-white);
+}
+.header nav span,.header nav div{
+	display: none;
+}
+.header nav img{
+	width: 60px;
+	border-radius: 50%;
+}
+
+.main{
+	width: 100%;
+	min-height: 240px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--JS-yellow);
+	color: var(--JS-black);
+	text-align: center;
+}
+
+.footer{
+	width: 100%;
+	min-height: 100px;
+	background-color: var(--JS-black);
+	color: var(--JS-white);
 }
