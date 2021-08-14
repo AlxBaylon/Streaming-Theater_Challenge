@@ -1,4 +1,14 @@
-//EXcepción: tecla enter en el input de cantidad de películas.
+//-----Creating HTML Check Boxes --------------------------------
+const creatingCheckBoxes = () =>{
+	const divCheckBoxes = document.querySelector('div.Streaming-checkboxes');
+	streamings.forEach((streaming) =>{
+		divCheckBoxes.innerHTML+= `<label for="StreamingServices--${streaming.name}">
+		<span>${streaming.name}</span>
+		<input type="checkbox" id="StreamingServices--${streaming.name}" onclick="onClickCheck()">
+	</label>`;
+	});
+}
+//Excepción: tecla enter en el input de cantidad de películas.
 const onPricesResult = () => {
 	const inputMovies = document.getElementById('InputMoviesNumber');
 	const moviesValues = inputMovies.value;
@@ -32,24 +42,23 @@ const onPricesResult = () => {
 	}
 }
 //-----Checkbox Logic-----------------------------------
-const netflixCheck = () => {
-	let n = 0;
-	confirmStreaming(n);
-}
-const hboMaxCheck = () =>{
-	let n = 1;
-	confirmStreaming(n);
-}
-const confirmStreaming = (n) => {
-	if (streamings[n].state == false){
-		streamings[n].state = true;
-	} else if (streamings[n].state == true){
-		streamings[n].state = false;
-	} 
+const onClickCheck = () => {
+	streamings.forEach((streaming) => {
+		const checkBox = document.getElementById(`StreamingServices--${streaming.name}`);
+		if(checkBox.checked){
+			streaming.state = true;
+		} else if(!checkBox.checked){
+			streaming.state = false;
+		}
+	});
 }
 //-----Prices------------------------------------------
 const theaterPrice = 70;
 const streamings = [
 	{name: 'Netflix', price:139, state: false},
 	{name: 'HBO-Max', price:99, state: false},
+	{name: 'Disney-Plus', price:159, state: false},
+	{name: 'AmazonPrimeVideo', price:99, state: false},
 ];
+
+creatingCheckBoxes();
