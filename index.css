@@ -93,7 +93,7 @@ div.Streaming-button button{
 
 .footer{
 	width: 100%;
-	min-height: 140px;
+	min-height: 120px;
 	background-color: var(--JS-black);
 	color: var(--JS-white);
 }
